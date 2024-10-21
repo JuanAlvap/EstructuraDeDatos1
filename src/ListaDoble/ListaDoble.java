@@ -52,5 +52,23 @@ public class ListaDoble {
             System.out.println("Lista vacía.");
         }
     }
+    public void mostrarListaFinal(){
+        NodoDoble x = FINAL;
+        if(x != null){
+            mostrarListaFinal(x);
+        }else{
+            System.out.println("Lista vacía.");
+        }
+    }
+    
+    private void mostrarListaFinal(NodoDoble nodo){
+        if(nodo == PTR){
+            System.out.println(nodo.getAuto().toString());
+            //mostrarListaFinal(nodo.getAnt());
+        }else{
+            System.out.println(nodo.getAuto().toString());
+            mostrarListaFinal(nodo.getAnt());
+        }
+    }
  
 }
